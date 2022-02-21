@@ -12,19 +12,37 @@ body {
   margin: 100px auto;
   display: flex;
   flex-direction: column-reverse;  
-  justify-content: start;
+  align-items: center; 
 }
 
-.cells {
+.cells {  
   display: flex;
   flex-wrap: wrap;
 }
+
+.button {
+border: none;
+color: aqua;
+background-color:  #00f5ff69;
+padding: 10px 16px;
+font-size: 20px;
+border-radius: 5px;
+cursor: pointer;
+margin: 15px
+}
+
 .cell {
   height: 250px;
   width: 250px;
   margin: 5px;
   background-color: rgba(165, 147, 65, 0.349);
+  cursor: pointer;  
 }
+
+.active {
+  background-color: black;
+} 
+
 
 .head { 
   margin: 0px 5px 20px 0px;
@@ -32,3 +50,48 @@ body {
   justify-content: center;
   
 }
+
+
+ .res {
+  color: azure;
+  font-weight: bold;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 50px;  
+}
+
+
+
+.circle {
+  height: 100%;
+  width: 100%;    
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  animation: draw 1s forwards;
+}
+
+.cross {
+  height: 100%;
+  width: 100%;   
+}
+
+.first-line {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: draw 0.5s forwards;
+}
+
+.second-line {
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+  animation: draw 0.5s 0.5s forwards;
+}
+
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
